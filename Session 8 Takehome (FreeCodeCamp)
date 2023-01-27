@@ -112,11 +112,51 @@ x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=
  Optional
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/return-a-sorted-array-without-changing-the-original-array
 
+// Only change code below this line
+    const sortArry = [...arr];
+    return sortArry.sort(function(a, b){return a - b})
+
+  // Only change code above this line
 x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-map-method-to-extract-data-from-an-array
+
+// Only change code below this line
+
+// const ratings = [];
+// for (let i = 0; i < watchList.length; i++) {
+//   ratings.push({title: watchList[i]["Title"], rating: watchList[i]["imdbRating"]});
+// }
+
+// console.log(JSON.stringify(ratings));
+const ratings = watchList.map(item => ({
+  title: item["Title"],
+  rating: item["imdbRating"]
+}));
+// Only change code above this line
 
 x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-filter-method-to-extract-data-from-an-array
 
+// Only change code below this line
+const filteredRatings = watchList.filter(movie => movie.imdbRating >= 8);
+// console.log(filteredRatings);
+
+const filteredList = filteredRatings.map(item => ({
+  title: item["Title"],
+  rating: item["imdbRating"]
+}));
+console.log(filteredList);
+
+// Only change code above this line
+
 x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/use-the-reduce-method-to-analyze-data
+
+// Add your code below this line
+  const averageRating = watchList
+    .filter(film => film.Director === "Christopher Nolan")
+    .map(film => Number(film.imdbRating))
+    
+    .reduce((sumOfRatings, rating) => sumOfRatings + rating) /
+  watchList.filter(film => film.Director === "Christopher Nolan").length;
+  // Add your code above this line
