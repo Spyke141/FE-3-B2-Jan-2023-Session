@@ -1,13 +1,58 @@
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/learn-about-functional-programming
+// Only change code below this line
+const tea4TeamFCC = new getTea(40);
+// Only change code above this line
 
 x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/avoid-mutations-and-side-effects-using-functional-programming
+// The global variable
+let fixedValue = 4;
+
+function incrementer() {
+  // Only change code below this line
+  let add = fixedValue;
+  return add+=1;
+  // Only change code above this line
+}
 
 x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/pass-arguments-to-avoid-external-dependence-in-a-function
+// The global variable
+let fixedValue = 4;
+
+// Only change code below this line
+function incrementer(value) {
+return value+= 1;
+  // Only change code above this line
+}
 
 x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/refactor-global-variables-out-of-functions
+// The global variable
+const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+// Change code below this line
+function add(arr, bookName) {
+  const arrayNameAdd = [...arr];
+  // arrayNameAdd = Array.from(bookList);
+  arrayNameAdd.push(bookName);
+  return arrayNameAdd;
+  
+  // Change code above this line
+}
+
+// Change code below this line
+function remove(arr, bookName) {
+  const arrayNameRemove = [...arr];
+  const book_index = arrayNameRemove.indexOf(bookName);
+  if (book_index >= 0) {
+
+    arrayNameRemove.splice(book_index, 1);
+    return arrayNameRemove;
+
+    // Change code above this line
+    }
+}
 
 x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x=x
 https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/remove-elements-from-an-array-using-slice-instead-of-splice
