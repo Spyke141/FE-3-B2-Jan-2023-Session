@@ -1,0 +1,70 @@
+//Combinatorics
+
+class Combinatorics {
+     constructor() {}
+
+factorial(num){
+     let result = 1;
+     for (let i = 2; i <= num; i++) {
+     result *= i;
+  }
+  return result;
+}
+
+findCombinations(n, r){
+     if (r>n) return 0;
+     return this.factorial(n) / (this.factorial(r) * this.factorial(n-r));
+}
+
+findPermutations(n, r){
+     if (r>n) return 0;
+     return this.factorial(n) / this.factorial(n-r);
+}
+}
+
+===================================================================================================================================================
+
+//Word Kit
+
+class WordKit {
+     constructor() {}
+
+     reverse(str){
+          
+          return str.split('').reverse().join('');
+
+     }
+
+     isPalindrome(str){
+          return str === this.reverse(str);
+     }
+
+     makePalindrome(str){
+          return str + this.reverse(str);
+     }
+}
+
+===================================================================================================================================================
+//Length Sum
+
+class Length {
+     constructor(ft, inch) {
+          this.ft = ft;
+          this.inch = inch;
+     }
+
+isValidObject(lengthObj){
+     return (lengthObj.ft >= 0 && lengthObj.inch >= 0) ? true : false;
+}
+
+addLength(lengthObj){
+     if (!this.isValidObject(lengthObj)) {
+          return[0, 0];
+     }
+     let totalInches = (this.ft * 12 + this.inch) + (lengthObj.ft * 12 + lengthObj.inch);
+     let totalFeet = Math.floor(totalInches / 12);
+     let totalInch = totalInches % 12;
+     return [totalFeet, totalInch];
+}    
+
+}
